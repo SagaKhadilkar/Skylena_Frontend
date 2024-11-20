@@ -1,7 +1,8 @@
 /* Global Styles */
 
+html,
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Audiowide", sans-serif;
 }
 
 
@@ -110,7 +111,7 @@ ul li {
     @media (max-width: 768px) {
         .image-container img {
             max-width: 100%;
-             margin: 10px 0;
+            margin: 10px 0;
         }
     }
 }

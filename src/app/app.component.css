@@ -10,3 +10,33 @@
     background-clip: text;
     color: transparent;
 }
+
+html,
+body {
+    font-family: "Audiowide", sans-serif;
+}
+
+
+/* Logo dimensions */
+
+#logo {
+    width: 60px;
+    height: 50px;
+}
+
+
+/* Gradient text for branding */
+
+.gradient-text {
+    background: linear-gradient(30deg, rgb(55, 19, 233), rgb(19, 162, 201));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* Font family for the entire page */
+
+
+/* Navbar links */

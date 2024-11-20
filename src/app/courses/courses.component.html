@@ -1,0 +1,12 @@
+<div class="courses-container">
+    <h2>All Courses - SkyLena InfoTechnology Pvt. LTD</h2>
+    <div class="course-list">
+        <div *ngFor="let course of courses" class="course-card">
+            <h3>{{ course.domain }}</h3>
+            <p><strong>Training Mode:</strong> {{ course.trainingMode }}</p>
+            <ul>
+                <li *ngFor="let item of course.technologies">{{ item }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

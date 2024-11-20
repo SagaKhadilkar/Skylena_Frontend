@@ -90,3 +90,8 @@ article img {
         /* Adjust space above the image for mobile */
     }
 }
+
+html,
+body {
+    font-family: "Audiowide", sans-serif;
+}

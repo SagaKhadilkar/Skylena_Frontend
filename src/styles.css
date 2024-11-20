@@ -1,5 +1,11 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
-/* body {
+    @import '~bootstrap/dist/css/bootstrap.min.css';
+    /* body {
     background-color: black;
 } */
+    
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-family: "Audiowide", sans-serif;
+    }

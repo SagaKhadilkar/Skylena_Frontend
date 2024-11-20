@@ -1,0 +1,10 @@
+<div class="achievements-container">
+    <h2>Achivements</h2>
+
+    <!-- Loop through the imageUrls array to display images -->
+    <div class="images-gallery">
+        <div *ngFor="let imageUrl of imageUrls">
+            <img [src]="imageUrl" alt="Achievement Image" class="achievement-image" />
+        </div>
+    </div>
+</div>

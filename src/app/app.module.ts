@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +12,14 @@ import { Service4Component } from './service4/service4.component';
 import { Service5Component } from './service5/service5.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AchivementsComponent } from './achivements/achivements.component';
+import { CoursesComponent } from './courses/courses.component';
+import { SafePipe } from './safe.pipe';
+
 
 @NgModule({
   declarations: [
@@ -26,11 +33,18 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     Service4Component,
     Service5Component,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    DashboardComponent,
+    AchivementsComponent,
+    CoursesComponent,
+    SafePipe
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RecaptchaModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,78 +1,97 @@
-        .blur-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        h2 {
-            color: rgb(0, 0, 0);
-            border-color: rgb(255, 149, 10);
-        }
-        
-        .container {
-            padding-top: 100px;
-            /* Adjust for top spacing */
-        }
-        
-        .rounded-input {
-            border-radius: 5px;
-            /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Box shadow */
-        }
-        
-        .btn-success {
-            border-radius: 5px;
-            /* Rounded corners */
-        }
-        
-        .btn-success:hover {
-            background-color: #28a745;
-            /* Darker green */
-            border-color: #28a745;
-        }
-        
-        .btn-primary {
-            background-color: #007bff;
-            /* Bootstrap primary color */
-            color: white;
-            /* Text color */
-            border-radius: 5px;
-            /* Rounded corners */
-            margin-left: 10px;
-            /* Space between buttons */
-        }
-        
-        .btn-primary:hover {
-            background-color: #0056b3;
-            /* Darker blue on hover */
-        }
-        
-         :host {
-            display: block;
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-        }
-        
-        .row {
-            margin-right: 120px;
-            margin-top: -40px;
-        }
-        
-        .container {
-            margin-left: 50px;
-        }
-        
-        h1 {
-            margin-top: -30px;
-        }
-        
-        .justified-text {
-            text-align: justify;
-            text-align-last: left;
-            width: 500px;
-        }
+                /* Background with blur effect applied only to the background */
+                
+                .blur-background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1;
+                    /* Ensure the background stays behind content */
+                }
+                /* Pseudo-element for the blur effect */
+                
+                .blur-background::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(255, 255, 255, 0.1);
+                    background-image: url('/assets/Images/background.png');
+                    background-size: cover;
+                    background-position: center;
+                    filter: blur(8px);
+                    /* Apply blur effect */
+                    -webkit-filter: blur(3px);
+                    /* Support for WebKit browsers */
+                    z-index: -1;
+                    /* Ensure blur is behind the content */
+                }
+                /* Main container for the content */
+                
+                .container {
+                    z-index: 10;
+                    /* Higher z-index to ensure content is on top */
+                    position: relative;
+                    /* Ensure the z-index applies properly */
+                    padding-top: 100px;
+                    /* Adjust for top spacing */
+                }
+                /* Heading styles */
+                
+                h2 {
+                    color: rgb(0, 0, 0);
+                    border-color: rgb(255, 149, 10);
+                }
+                /* Styling for input fields */
+                
+                .rounded-input {
+                    border-radius: 5px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                /* Button styles */
+                
+                .btn-success,
+                .btn-primary {
+                    border-radius: 5px;
+                }
+                
+                .btn-primary {
+                    margin-left: 10px;
+                }
+                
+                .btn-primary:hover {
+                    background-color: #0056b3;
+                }
+                /* Host layout */
+                
+                 :host {
+                    display: block;
+                    width: 100vw;
+                    height: 100vh;
+                    position: relative;
+                }
+                /* Adjustments for row and margin */
+                
+                .row {
+                    margin-right: 120px;
+                    margin-top: -470px;
+                }
+                
+                h1 {
+                    margin-top: -70px;
+                }
+                /* Text alignment */
+                
+                .justified-text {
+                    text-align: justify;
+                    text-align-last: left;
+                    width: 500px;
+                }
+                /* OTP input width */
+                
+                #otp {
+                    width: 140px;
+                }

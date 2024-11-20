@@ -163,3 +163,8 @@ body {
         font-size: 14px;
     }
 }
+
+html,
+body {
+    font-family: "Audiowide", sans-serif;
+}

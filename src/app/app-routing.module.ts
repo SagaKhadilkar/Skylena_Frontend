@@ -9,6 +9,9 @@ import { Service5Component } from './service5/service5.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './register/register.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AchivementsComponent } from './achivements/achivements.component';
+import { CoursesComponent } from './courses/courses.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -18,8 +21,12 @@ const routes: Routes = [
  {path:'ser3',component:Service3Component},
  {path:'ser4',component:Service4Component},
  {path:'ser5',component:Service5Component},
+ {path:'achivements',component:AchivementsComponent},
+ {path:'courses',component:CoursesComponent},
  {path:'about',component:AboutUsComponent},
  {path:'contact',component:ContactUsComponent},
+ {path:'dashboard',component:DashboardComponent},
+
  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

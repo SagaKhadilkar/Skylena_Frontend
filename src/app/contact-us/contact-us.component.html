@@ -4,42 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
 </head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 
 <body>
 
     <div class="container">
         <div style="text-align:center">
             <h2>Contact Us</h2>
-
         </div>
         <div class="row">
             <div class="column">
-                <img src='assets/Images/conta.jpg' style="width:100%">
+                <img src="assets/Images/conta.jpg" style="width:100%">
             </div>
             <div class="column">
-                <form action="/action_page.php">
+                <!-- Bind the form to the submitForm() function with validation -->
+                <form (ngSubmit)="submitForm()" #contactForm="ngForm" novalidate>
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="fname" name="firstname" [(ngModel)]="skylena.firstname" placeholder="Your name.." required #fname="ngModel">
+
+                    <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="text-danger">
+                        <!-- First Name is required. -->
+                    </div>
+
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <input type="text" id="lname" name="lastname" [(ngModel)]="skylena.lastname" placeholder="Your last name.." required #lname="ngModel">
+
+                    <div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="text-danger">
+                        <!-- Last Name is required. -->
+                    </div>
+
                     <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="canada">--Select Option--</option>
-                        <option value="canada">India</option>
-                        <option value="canada">Dubai</option>
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
+                    <select id="country" name="country" [(ngModel)]="skylena.country" required #country="ngModel">
+                        <option value="" disabled selected>--Select Option--</option>
+                        <option value="India">India</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                    </select>
+                    <div *ngIf="country.invalid && (country.dirty || country.touched)" class="text-danger">
+                        <!-- Please select a country. -->
+                    </div>
+
                     <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                    <input type="submit" value="Submit">
+                    <textarea id="subject" name="subject" [(ngModel)]="skylena.subject" placeholder="Write something.." required style="height:170px" #subject="ngModel"></textarea>
+                    <div *ngIf="subject.invalid && (subject.dirty || subject.touched)" class="text-danger">
+                        <!-- Subject is required. -->
+                    </div>
+
+                    <!-- Submit button disabled until form is valid -->
+                    <button class="btn btn-success mt-3" type="submit" [disabled]="contactForm.invalid">Submit</button>
                 </form>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
