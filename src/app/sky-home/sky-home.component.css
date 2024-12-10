@@ -1,0 +1,17 @@
+.container {
+    z-index: 10;
+    /* Higher z-index to ensure content is on top */
+    position: relative;
+    /* Ensure the z-index applies properly */
+    padding-top: 100px;
+    /* Adjust for top spacing */
+}
+
+h1 {
+    margin-top: -70px;
+}
+
+p {
+    text-align: justify;
+    font-size: 22px;
+}

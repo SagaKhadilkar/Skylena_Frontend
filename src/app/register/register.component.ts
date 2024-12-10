@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SkylenaService } from '../skylena.service';  // Import the service
 import { Router } from '@angular/router';
+import { SkylenaService } from '../skylena.service';
 
 @Component({
   selector: 'app-register',

@@ -19,6 +19,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AchivementsComponent } from './achivements/achivements.component';
 import { CoursesComponent } from './courses/courses.component';
 import { SafePipe } from './safe.pipe';
+import { SkyHomeComponent } from './sky-home/sky-home.component';
+import { DataManagementComponent } from './data-management/data-management.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { NoOfUsersComponent } from './no-of-users/no-of-users.component';
 
 
 @NgModule({
@@ -37,7 +41,11 @@ import { SafePipe } from './safe.pipe';
     DashboardComponent,
     AchivementsComponent,
     CoursesComponent,
-    SafePipe
+    SafePipe,
+    SkyHomeComponent,
+    DataManagementComponent,
+    AdminDashboardComponent,
+    NoOfUsersComponent
   ],
   imports: [
     HttpClientModule,

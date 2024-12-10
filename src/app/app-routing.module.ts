@@ -12,9 +12,14 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AchivementsComponent } from './achivements/achivements.component';
 import { CoursesComponent } from './courses/courses.component';
+import { SkyHomeComponent } from './sky-home/sky-home.component';
+import { DataManagementComponent } from './data-management/data-management.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { NoOfUsersComponent } from './no-of-users/no-of-users.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path:'',component:SkyHomeComponent},
+  {path:'login',component:HomeComponent},
  {path:'ser1',component:Service1Component},
  {path:'create',component:RegisterComponent},
  {path:'ser2',component:Service2Component},
@@ -26,7 +31,9 @@ const routes: Routes = [
  {path:'about',component:AboutUsComponent},
  {path:'contact',component:ContactUsComponent},
  {path:'dashboard',component:DashboardComponent},
-
+ {path:'adminboard',component:AdminDashboardComponent},
+ {path:'adminregister',component:NoOfUsersComponent},
+ {path:'datamanage',component:DataManagementComponent},
  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

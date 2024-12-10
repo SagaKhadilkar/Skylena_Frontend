@@ -7,6 +7,7 @@ import { SkylenaService } from '../skylena.service';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent {
+  
   skylena = {
     firstname: '',
     lastname: '',

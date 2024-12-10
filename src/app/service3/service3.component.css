@@ -1,10 +1,5 @@
 /* Global Styles */
 
-html,
-body {
-    font-family: "Audiowide", sans-serif;
-}
-
 
 /* Container with background image */
 
@@ -36,7 +31,6 @@ body {
 article {
     width: 80%;
     margin: 50px auto;
-    background-color: white;
     padding: 20px;
     border-radius: 10px;
     line-height: 1.6;

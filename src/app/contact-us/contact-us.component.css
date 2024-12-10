@@ -6,11 +6,6 @@
     }
 }
 
-html,
-body {
-    font-family: "Audiowide", sans-serif;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -46,7 +41,6 @@ input[type=submit]:hover {
 
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 10px;
 }
 
@@ -60,6 +54,10 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
+img {
+    border-radius: 10px;
+}
+
 
 /* Clear floats after the columns */
 
@@ -71,4 +69,31 @@ input[type=submit]:hover {
 
 img {
     height: 500px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    /* Light background */
+    border-radius: 8px;
+}
+
+.contact-info i {
+    font-size: 1.5rem;
+    color: #007bff;
+    /* Icon color */
+}
+
+.contact-info h5 {
+    font-weight: bold;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.phone-numbers {
+    color: #000000;
+    /* Red color for phone numbers */
 }

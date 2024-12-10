@@ -1,0 +1,137 @@
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: -70px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    /* Optional: bold heading */
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    /* Ensures seamless borders */
+    margin-top: 20px;
+    /* Adds space between heading and table */
+}
+
+.table,
+.table th,
+.table td {
+    border: 1px solid #000000;
+    /* Light grey border for a clean look */
+    text-align: left;
+    /* Aligns text to the left */
+    padding: 8px;
+    text-align: center;
+    /* Adds spacing inside cells */
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #ddd;
+    /* Apply border to table cells */
+    padding: 10px;
+    /* Adds padding inside cells */
+    text-align: center;
+    /* Center-aligns table content */
+}
+
+
+/* Alternating Row Colors */
+
+.table-bordered tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* White for odd rows */
+}
+
+.table-bordered tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Light grey for even rows */
+}
+
+
+/* Header Styling */
+
+.table-bordered th {
+    background-color: #f4f4f4;
+    /* Light grey background for header */
+    font-weight: bold;
+    /* Bold header text */
+}
+
+
+/* Hover Effect for Rows */
+
+.table tbody tr:hover {
+    background-color: #e0e0e0;
+    /* Slightly darker grey on hover */
+}
+
+
+/* Delete Button Styling */
+
+button.btn-danger {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: white;
+    background-color: #dc3545;
+    /* Red for delete button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn-danger:hover {
+    background-color: #c82333;
+    /* Darker red on hover */
+}
+
+
+/* Back Button Styling */
+
+button.btn-light {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 400px;
+    cursor: pointer;
+}
+
+button.btn-light:hover {
+    background-color: #adadad;
+}
+
+
+/* Adjust spacing for back button */
+
+.mb-3 {
+    margin-top: -65px;
+    margin-left: 5px;
+}
+
+
+/* Bold styling for icons or text */
+
+b {
+    color: black;
+    font-size: 20px;
+}
+
+
+/* Center "No Data" message if used */
+
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    /* Light grey for "no data" message */
+    margin-top: 20px;
+}

@@ -1,0 +1,42 @@
+<!-- Back Button -->
+<div class="d-flex justify-content-start mb-3">
+    <button class="btn btn-light" (click)="goBack()"><b>&#11104;</b></button>
+</div>
+<div class="container mt-4">
+    <h2>Registered Users</h2>
+    <br>
+
+    <!-- Error Message -->
+    <div *ngIf="error" class="alert alert-danger">
+        {{ error }}
+    </div>
+
+    <!-- Users Table -->
+    <table class="table table-striped" *ngIf="users.length > 0; else noData">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.gender }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- No Data Template -->
+    <ng-template #noData>
+        <p>No users found.</p>
+    </ng-template>
+</div>

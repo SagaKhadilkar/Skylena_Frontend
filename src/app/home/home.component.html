@@ -1,63 +1,52 @@
-<div class="blur-background">
-    <div class="container">
-        <h1>Welcome to SkyLena</h1> <br>
-        <p class="justified-text">
-            SkyLena Info Technology Pvt. Ltd. is a Cloud service and cybersecurity company offering comprehensive services to small and medium-sized businesses in India and the global market, with plans to expand to other regions.
-            <br><br> We provide premier corporate training and internship solutions designed to empower IT professionals and equip aspiring tech enthusiasts with the skills and knowledge needed to excel in the rapidly evolving world of Information Technology
-            (IT).
-            <br><br> Our services include cloud consulting, cloud infrastructure design, cloud migration, cloud deployment, cloud security, and compliance integration for customer experience products.
-        </p>
-        <div class="row justify-content-end">
-            <div class="col-md-4">
+<div class="d-flex justify-content-center">
+    <div class="col-md-4">
 
-                <h2 class="text-center mt-4">Login</h2>
+        <h2 class="text-center mt-4">Login</h2>
 
-                <!-- Error message for invalid login or OTP -->
-                <div *ngIf="errorMessage" class="alert alert-danger">
-                    {{ errorMessage }}
-                </div>
-
-                <!-- Status message from API responses -->
-                <div *ngIf="statusMessage" class="alert alert-info">
-                    {{ statusMessage }}
-                </div>
-
-                <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-                    <!-- Email field -->
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control rounded-input" placeholder="Enter your email" required [(ngModel)]="email" name="email">
-                    </div>
-
-                    <!-- Password field -->
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" class="form-control rounded-input" placeholder="Enter your password" required [(ngModel)]="password" name="password">
-                    </div>
-
-                    <!-- OTP field shows only after OTP is sent -->
-                    <div class="form-group" *ngIf="otpSent">
-                        <label for="otp">Enter OTP</label>
-                        <div class="d-flex">
-                            <input type="text" id="otp" class="form-control rounded-input" placeholder="Enter 6-digit OTP" required [(ngModel)]="otp" name="otp" maxlength="6">
-                            <button type="button" class="btn btn-success ms-2" (click)="verifyOtp()">Verify OTP</button>
-                            <span *ngIf="otpVerified" class="text-success ms-2">&#10004;</span>
-                        </div>
-                    </div>
-
-                    <div class="d-flex justify-content-between">
-                        <!-- <button type="submit" class="btn btn-success mt-3" [disabled]="otpSent && !otpVerified">Login</button> -->
-                        <button type="submit" class="btn btn-success mt-3" [disabled]="otpSent && !otpVerified" (click)="loginAfterOtpVerified()">Login</button>
-
-                        <a href="#" class="btn btn-primary mt-3" routerLinkActive="active" [routerLink]="['/create']">Create Account</a>
-                    </div>
-                </form>
-
-                <div class="text-center mt-3">
-                    <a href="#">Forgot Password?</a>
-                </div>
-
-            </div>
+        <!-- Error message for invalid login or OTP -->
+        <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
         </div>
+
+        <!-- Status message from API responses -->
+        <div *ngIf="statusMessage" class="alert alert-info">
+            {{ statusMessage }}
+        </div>
+
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control rounded-input" placeholder="Enter your email" required [(ngModel)]="email" name="email">
+            </div>
+
+            <!-- Password field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control rounded-input" placeholder="Enter your password" required [(ngModel)]="password" name="password">
+            </div>
+
+            <!-- OTP field shows only after OTP is sent -->
+            <div class="form-group" *ngIf="otpSent">
+                <label for="otp">Enter OTP</label>
+                <div class="d-flex">
+                    <input type="text" id="otp" class="form-control rounded-input" placeholder="Enter 6-digit OTP" required [(ngModel)]="otp" name="otp" maxlength="6">
+                    <button type="button" class="btn btn-success ms-2" (click)="verifyOtp()">Verify OTP</button>
+                    <span *ngIf="otpVerified" class="text-success ms-2">&#10004;</span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <!-- <button type="submit" class="btn btn-success mt-3" [disabled]="otpSent && !otpVerified">Login</button> -->
+                <button type="submit" class="btn btn-success mt-3" [disabled]="otpSent && !otpVerified" (click)="loginAfterOtpVerified()">Login</button>
+
+                <a href="#" class="btn btn-primary mt-3" routerLinkActive="active" [routerLink]="['/create']">Create Account</a>
+            </div>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="#">Forgot Password?</a>
+        </div>
+
     </div>
 </div>
